@@ -8,17 +8,17 @@ def create_files(entidade):
     # Lista de comandos
     commands = [
         f'touch \
-            core/models/{entidade}.py \
-            core/serializers/{entidade}.py \
-            core/views/{entidade}.py',
+            garagem/models/{entidade}.py \
+            garagem/serializers/{entidade}.py \
+            garagem/views/{entidade}.py',
         f'code \
-            core/models/{entidade}.py \
-            core/models/__init__.py \
-            core/admin.py \
-            core/serializers/{entidade}.py \
-            core/serializers/__init__.py \
-            core/views/{entidade}.py \
-            core/views/__init__.py \
+            garagem/models/{entidade}.py \
+            garagem/models/__init__.py \
+            garagem/admin.py \
+            garagem/serializers/{entidade}.py \
+            garagem/serializers/__init__.py \
+            garagem/views/{entidade}.py \
+            garagem/views/__init__.py \
             app/urls.py',
     ]
 
