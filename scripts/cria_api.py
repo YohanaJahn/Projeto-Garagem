@@ -5,32 +5,22 @@ import sys
 
 def create_files(entidade):
     print(f'Criando e abrindo arquivos para {entidade}...')
-    # Lista de comandos
-    commands = [
-        f'touch \
-            garagem/models/{entidade}.py \
-            garagem/serializers/{entidade}.py \
-            garagem/views/{entidade}.py',
-        f'code \
-            garagem/models/{entidade}.py \
-            garagem/models/__init__.py \
-            garagem/admin.py \
-            garagem/serializers/{entidade}.py \
-            garagem/serializers/__init__.py \
-            garagem/views/{entidade}.py \
-            garagem/views/__init__.py \
-            app/urls.py',
+
+    files_to_create = [
+        f'garagem\\models\\{entidade}.py',
+        f'garagem\\serializers\\{entidade}.py',
+        f'garagem\\views\\{entidade}.py',
     ]
 
-    # Executa cada comando
-    for cmd in commands:
-        os.system(cmd)
+    for file_path in files_to_create:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, 'w') as f:
+            pass  
 
 
 if __name__ == '__main__':
-    ARG_COUNT = 2
-    if len(sys.argv) != ARG_COUNT:
-        print(f'Uso: python {sys.argv[0]} <parametro>')
+    if len(sys.argv) != 2:
+        print(f'Uso: python {sys.argv[0]} <entidade>')
         sys.exit(1)
 
     parametro = sys.argv[1]
