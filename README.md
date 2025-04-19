@@ -4,7 +4,7 @@ Esse é um template de projeto Django com DRF, PDM e muito mais. Ele já vem com
 
 Esse template já está pronto para ser utilizado em produção, com o [Render](http://render.com) e o [PostgreSQL](https://www.postgresql.org/). Mas também pode ser utilizado em desenvolvimento, com o [PDM](https://pdm.fming.dev/) e o [SQLite](https://www.sqlite.org/index.html).
 
-O template também já vem com alguns arquivos de configuração pré-configurados, como:
+O template também já vem com alguns arquivos de configuração pré-configurados, como :
 
 - `pyproject.toml`: Arquivo de configuração do PDM.
 - `Procfile`: Arquivo de configuração do Fl0.
